@@ -33,7 +33,7 @@
 <meta property="og:image" content="https://fjianguo.github.io/jianguo.github.io/jianguo.github.io/2020/10/16/hello-world/images%5C%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.jpg">
 <meta property="og:image" content="https://fjianguo.github.io/jianguo.github.io/jianguo.github.io/2020/10/16/hello-world/images%5Cexception.jpg">
 <meta property="article:published_time" content="2020-10-16T07:19:05.525Z">
-<meta property="article:modified_time" content="2020-10-16T09:56:28.622Z">
+<meta property="article:modified_time" content="2020-10-16T09:58:38.541Z">
 <meta property="article:author" content="jianguo">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://fjianguo.github.io/jianguo.github.io/2020/10/16/hello-world/hello-world/images/%E8%BF%90%E7%AE%97%E7%AC%A6.jpg">
@@ -211,9 +211,15 @@
 <li>显示当前路径 pwd</li>
 <li>定时执行 crontab：* * * * * 执行语句每个”*”对应：分，时，日，月，星期。</li>
 <li>shell项目<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">    while (( 0 &#x3D;&#x3D; 0 ))</span><br><span class="line">do</span><br><span class="line">dir_name&#x3D;$(date &#39;+%M&#39;)</span><br><span class="line">    python3 &lt;&lt;EOF</span><br><span class="line">import sys</span><br><span class="line">from time import sleep</span><br><span class="line">sleep(10)</span><br><span class="line">EOF  &#x2F;&#x2F;暂停10秒</span><br><span class="line"># 调用makeF函数</span><br><span class="line">runmake&#x3D;$(makeF $dir_name)</span><br><span class="line">echo $runmake</span><br><span class="line"># 调用timeF函数</span><br><span class="line">runtime&#x3D;$(timeF $dir_name)</span><br><span class="line">echo $runtime</span><br><span class="line">done</span><br><span class="line"></span><br><span class="line">function makeF()&#123;</span><br><span class="line"></span><br><span class="line">    [ -d &#x2F;mnt&#x2F;f&#x2F;WorkSpace&#x2F;$1 ] ||&#123;</span><br><span class="line">    mkdir &#x2F;mnt&#x2F;f&#x2F;WorkSpace&#x2F;$1</span><br><span class="line">    &#125; # 查询有无文件夹，无则创建，否则不创建</span><br><span class="line">    [ -d &#x2F;mnt&#x2F;f&#x2F;WorkSpace&#x2F;$1&#x2F;$1 ] ||&#123;</span><br><span class="line">    touch &#x2F;mnt&#x2F;f&#x2F;WorkSpace&#x2F;$1&#x2F;$1  </span><br><span class="line">    &#125; # 查询有无文件，无则创建，否则不创建</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function timeF()&#123;</span><br><span class="line">    echo $(date +%s) &gt;&gt; &#x2F;mnt&#x2F;f&#x2F;WorkSpace&#x2F;$1&#x2F;$1 # 向文件中写如当前时间戳</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="Python3"><a href="#Python3" class="headerlink" title="Python3"></a>Python3</h2><a target="_blank" rel="noopener" href="https://www.w3cschool.cn/python3/">Python3</a></li>
+
+</li>
 </ul>
 </li>
+</ol>
+<a id="more"></a>
+
+<h2 id="Python3"><a href="#Python3" class="headerlink" title="Python3"></a>Python3</h2><p><a target="_blank" rel="noopener" href="https://www.w3cschool.cn/python3/">Python3</a></p>
+<ol>
 <li>基本数据类型<ul>
 <li>Numbers(数字)<br>Python 3支持int、float、bool、complex(复数)。</li>
 </ul>
