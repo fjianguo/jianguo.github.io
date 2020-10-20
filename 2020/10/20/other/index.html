@@ -6,15 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://fjianguo.github.io/jianguo.github.io">
-  <title>Archives | Hexo</title>
+  <title>Other | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://fjianguo.github.io/jianguo.github.io/archives/index.html">
+  <meta name="description" content="otherMysql 索引   定义&amp;emsp;&amp;emsp;索引是一种单独的、物理的对数据库表中一列或多列的值进行排序的一种存储结构，它是某个表中一列或若干列值的集合和相应的指向表中物理标识这些值的数据页的逻辑指针清单。(相当于目录，根据页码找内容)   分类     普通索引&amp;emsp;&amp;emsp;普通索引是最基本的索引类型，唯一任务是加快对数据的访问速度，没有任何限制。创建普通索引时，通常使用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Other">
+<meta property="og:url" content="https://fjianguo.github.io/jianguo.github.io/2020/10/20/other/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="otherMysql 索引   定义&amp;emsp;&amp;emsp;索引是一种单独的、物理的对数据库表中一列或多列的值进行排序的一种存储结构，它是某个表中一列或若干列值的集合和相应的指向表中物理标识这些值的数据页的逻辑指针清单。(相当于目录，根据页码找内容)   分类     普通索引&amp;emsp;&amp;emsp;普通索引是最基本的索引类型，唯一任务是加快对数据的访问速度，没有任何限制。创建普通索引时，通常使用">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://fjianguo.github.io/jianguo.github.io/2020/10/20/other/images/exception.jpg">
+<meta property="article:published_time" content="2020-10-20T07:11:04.000Z">
+<meta property="article:modified_time" content="2020-10-20T07:13:57.732Z">
 <meta property="article:author" content="jianguo">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://fjianguo.github.io/jianguo.github.io/2020/10/20/other/images/exception.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,184 +156,258 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-other" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      Other
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/jianguo.github.io/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/jianguo.github.io/2020/10/20/other/" class="archive-article-date">
+
+        
+        <a href="/jianguo.github.io/2020/10/20/other/" class="archive-article-date">
   	<time datetime="2020-10-20T07:11:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-20</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/jianguo.github.io/2020/10/20/other/">Other</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="other"><a href="#other" class="headerlink" title="other"></a>other</h2><h3 id="Mysql"><a href="#Mysql" class="headerlink" title="Mysql"></a>Mysql</h3><ol>
+<li>索引  <ul>
+<li>定义<br>&emsp;&emsp;索引是一种单独的、物理的对数据库表中一列或多列的值进行排序的一种存储结构，它是某个表中一列或若干列值的集合和相应的指向表中物理标识这些值的数据页的逻辑指针清单。(相当于目录，根据页码找内容)  </li>
+<li>分类  </li>
+</ul>
+<ol>
+<li>普通索引<br>&emsp;&emsp;普通索引是最基本的索引类型，唯一任务是加快对数据的访问速度，没有任何限制。创建普通索引时，通常使用的关键字是 INDEX 或 KEY。  </li>
+<li>唯一性索引<br>&emsp;&emsp;唯一性索引是不允许索引列具有相同索引值的索引。如果能确定某个数据列只包含彼此各不相同的值，在为这个数据列创建索引的时候就应该用关键字 UNIQUE 把它定义为一个唯一性索引。  </li>
+<li>主键索引<br>&emsp;&emsp;主键索引是一种唯一性索引，即不允许值重复或者值为空，并且每个表只能有一个主键。主键可以在创建表的时候指定，也可以通过修改表的方式添加，必须指定关键字 PRIMARY KEY。</li>
+<li>空间索引<br>&emsp;&emsp;空间索引主要用于地理空间数据类型 GEOMETRY。</li>
+<li>全文索引<br>&emsp;&emsp;全文索引只能在 VARCHAR 或 TEXT 类型的列上创建，并且只能在 MyISAM 表中创建。</li>
+</ol>
+</li>
+<li>执行计划<br>&emsp;&emsp;执行计划，就是一条SQL语句，在数据库中实际执行的时候，一步步的分别都做了什么。</li>
+<li>事务<br>&emsp;&emsp;事务是逻辑上的一组操作，组成这组操作的各个单元，要不全都成功要不全都失败，这个特性就是事务。</li>
+<li>幻读、脏读和不可重复读<ul>
+<li>幻读<br>&emsp;&emsp;在一次事务里面，多次查询之后，结果集的个数不一致的情况叫做幻读。而多出来或者少的哪一行被叫做幻行。</li>
+<li>脏读<br>&emsp;&emsp;脏读又称无效数据读出。一个事务读取另外一个事务还没有提交的数据叫脏读。</li>
+<li>不可重复读<br>&emsp;&emsp;在同一事务中，两次读取同一数据，得到内容不同。</li>
+</ul>
+</li>
+<li>主键<br>&emsp;&emsp;主键是数据表的唯一索引，指的是一个列或多列的组合，其值能唯一地标识表中的每一行，通过它可强制表的实体完整性，主键主要是用与其他表的外键关联，以及本记录的修改与删除。</li>
+<li>视图<br>&emsp;&emsp;视图是一种虚拟存在的表，是一个逻辑表，本身并不包含数据，作为一个select语句保存在数据字典中的。<h3 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h3></li>
+<li>发展历史<ul>
+<li>1995年5月23日，Java语言诞生</li>
+<li>1996年1月，第一个JDK-JDK1.0诞生</li>
+<li>1996年4月，10个最主要的操作系统供应商申明将在其产品中嵌入JAVA技术</li>
+<li>1996年9月，约8.3万个网页应用了JAVA技术来制作</li>
+<li>1997年2月18日，JDK1.1发布</li>
+<li>1997年4月2日，JavaOne会议召开，参与者逾一万人，创当时全球同类会议规模之纪录</li>
+<li>1997年9月，JavaDeveloperConnection社区成员超过十万</li>
+<li>1998年2月，JDK1.1被下载超过2,000,000次</li>
+<li>1998年12月8日，JAVA2企业平台J2EE发布</li>
+<li>1999年6月，SUN公司发布Java的三个版本：标准版（JavaSE,以前是J2SE）、企业版（JavaEE以前是J2EE）和微型版（JavaME，以前是J2ME）</li>
+<li>2000年5月8日，JDK1.3发布</li>
+<li>2000年5月29日，JDK1.4发布</li>
+<li>2001年6月5日，NOKIA宣布，到2003年将出售1亿部支持Java的手机</li>
+<li>2001年9月24日，J2EE1.3发布</li>
+<li>2002年2月26日，J2SE1.4发布，自此Java的计算能力有了大幅提升</li>
+<li>2004年9月30日18:00PM，J2SE1.5发布，成为Java语言发展史上的又一里程碑。为了表示该版本的重要性，J2SE1.5更名为Java SE 5.0</li>
+<li>2005年6月，JavaOne大会召开，SUN公司公开Java SE 6。此时，Java的各种版本已经更名，以取消其中的数字”2”：J2EE更名为Java EE，J2SE更名为Java SE，J2ME更名为Java ME</li>
+<li>2006年12月，SUN公司发布JRE6.0</li>
+<li>2009年04月20日，甲骨文74亿美元收购Sun。取得java的版权。</li>
+<li>2010年11月，由于甲骨文对于Java社区的不友善，因此Apache扬言将退出JCP。</li>
+<li>2011年7月28日，甲骨文发布java7.0的正式版。</li>
+</ul>
+</li>
+<li>命名规范<ul>
+<li>包命名<br>全小写，由域名定义，一般采用自己在互联网上的域名(com.jianguo.service)。</li>
+<li>类名<br>每个单词首字母大写(TestTime)。</li>
+<li>方法名<br>首字母小写后面其他单词首字母大写(public static void openFile(){})。</li>
+<li>常量名<br>全部大写常加”_”，并指出完整定义，多个单词组成用下划线分隔(public static final int NUMBER=0)。</li>
+<li>参数名<br>与方法命名相同，尽量用一个单词(public void test(String str)中str)。</li>
+<li>变量命名  </li>
+</ul>
+<ol>
+<li>camel标记法：首字母小写，后面单词都以大写字母开头。  </li>
+<li>pascal标记法：首字母大写，后面单词首字母大写。  </li>
+<li>匈牙利标记法：在以pascal标记法的变量前附加小写序列说明变量类型(scope_typeVariableName)。</li>
+</ol>
+</li>
+<li>Java bean<ul>
+<li>JavaBean 是一种JAVA语言写成的可重用组件，为写成JavaBean，类必须是具体的和公共的，并且具有无参数的构造器，JavaBean 通过提供符合一致性设计模式的公共方法将内部域暴露成员属性。  </li>
+<li>JavaBean可分为两种：<br>&emsp;&emsp;一种是有用户界面（UI，User Interface）的JavaBean；还有一种是没有用户界面，主要负责处理事务（如数据运算，操纵数据库）的JavaBean。</li>
+</ul>
+</li>
+<li>多态和继承<ul>
+<li>多态<br>&emsp;&emsp;多态是同一个行为具有多个不同表现形式或形态的能力，是对象多种表现形式的体现(动物有很多种：狗，毛，鱼等)。</li>
+<li>继承<br>&emsp;&emsp;继承是面向对象最显著的一个特性,是从已有的类中派生出新的类，新的类能吸收已有类的数据属性和行为，并能扩展新的能力,是使用已存在的类的定义作为基础建立新类的技术，新类的定义可以增加新的数据或新的功能，也可以用父类的功能，但不能选择性地继承父类。</li>
+</ul>
+</li>
+<li>Java mvc<ul>
+<li>MVC 模式代表 Model-View-Controller(模型-视图-控制器)模式  </li>
+</ul>
+<ol>
+<li>Model(模型)：模型代表一个存取数据的对象或 JAVA POJO,它也可以带有逻辑，在数据变化时更新控制器。  </li>
+<li>View(视图)：视图代表模型包含的数据的可视化。</li>
+</ol>
+</li>
+<li>异常处理<ul>
+<li>异常是程序中的一些错误，但并不是所有的错误都是异常，并且错误有时候是可以避免的。</li>
+<li>异常发生的原因有很多，通常包含以下几大类：</li>
+</ul>
+<ol>
+<li>用户输入了非法数据。  </li>
+<li>要打开的文件不存在。  </li>
+<li>网络通信时连接中断，或者JVM内存溢出。  </li>
+</ol>
+<ul>
+<li>Exception类的层次<br>&emsp;&emsp;Exception 类是 Throwable 类的子类,有两个主要的子类：IOException 类和 RuntimeException 类。<br><img src="images/exception.jpg" alt="Exception类的层次"><br><a target="_blank" rel="noopener" href="https://www.w3cschool.cn/java/java-exceptions.html">异常处理</a></li>
+</ul>
+</li>
+<li>Java 注解开发<ul>
+<li>注解作用<br>&emsp;&emsp;用于告诉编译器javac或工具软件传达一种信息,相当于一个标记，加了注解就等于打上了某种标记，没加就等于没有某种标记，以后，javac编译器，开发工具和其他程序可以用反射来了解你的类及各种元素上有无何种标记，看你有什么标记就去干相应的事,标记可以加在包、类、方法、字段、方法的参数及局部变量上。</li>
+<li>基本注解<br>&emsp;&emsp;Deprecated过时的,FunctionalInterface函数式接口：一种特殊类型的接口，这种接口中只定义了唯一的抽象方法的接口，Override 覆盖 ，SafeVarargs 可变参数安全性注解，SuppressWarnings过滤警告注解。</li>
+<li>元注解  </li>
+</ul>
+<ol>
+<li>@Retention标记注解的生命周期，三种取值分别为：RetentionPolicy.SOURCE RetentionPolicy.CLASS  RetentionPolicy.RUNNTIME 分别对应：源文件注解，class文件注解，内存中字节码，默认值是在class阶段@Override是在编译阶段覆盖的，因此它的Retention是source @SuppressWarnings也是source  Deprecated是runtime  。</li>
+<li>@Target 标记给哪个元素添加注解取值分别为ElementType.Annotation_Type ElementType.Constructor ElementType.FIELD等等。</li>
+</ol>
+</li>
+</ol>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://fjianguo.github.io/jianguo.github.io/2020/10/20/other/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/jianguo.github.io/2020/10/20/java/" class="archive-article-date">
-  	<time datetime="2020-10-20T07:10:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-20</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/jianguo.github.io/2020/10/20/java/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/jianguo.github.io/2020/10/20/java/">Java</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/jianguo.github.io/2020/10/20/mysql/" class="archive-article-date">
-  	<time datetime="2020-10-20T07:10:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/jianguo.github.io/2020/10/20/mysql/">Mysql</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/jianguo.github.io/2020/10/20/python/" class="archive-article-date">
-  	<time datetime="2020-10-20T07:10:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/jianguo.github.io/2020/10/20/python/">Python</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/jianguo.github.io/2020/10/20/shell/" class="archive-article-date">
-  	<time datetime="2020-10-20T07:09:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/jianguo.github.io/2020/10/20/shell/">Shell</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/jianguo.github.io/2020/10/16/hello-world/" class="archive-article-date">
-  	<time datetime="2020-10-16T07:19:05.525Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/jianguo.github.io/2020/10/16/hello-world/">学习总结</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -350,8 +430,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
