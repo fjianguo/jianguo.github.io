@@ -152,6 +152,96 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-study1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/jianguo.github.io/2020/10/23/study1/">study1</a>
+    </h1>
+  
+
+        
+        <a href="/jianguo.github.io/2020/10/23/study1/" class="archive-article-date">
+  	<time datetime="2020-10-23T11:12:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><ol>
+<li>访问测试项目路径localhost:8080 后台抛出异常:This application has no explicit mapping for /error, so you are seeing this as a fallback.  <ul>
+<li>原因及解决方法  </li>
+</ul>
+<ol>
+<li>Application启动类的位置不对：要将Application类放在最外侧，即包含所有子包 ，spring-boot会自动加载启动类所在包下及其子包下的所有组件。<br><img src="images/Application.JPG" alt="Application">   </li>
+<li>springboot的配置文件有误：关于application.yml或application.properties文件中视图解析器的配置问题。在pom文件下的spring-boot-starter-paren版本较高时使用以下配置：spring.mvc.view.prefix/spring.mvc.view.suffix，当pom文件下的spring-boot-starter-paren版本较低时使用以下配置：spring.view.prefix/spring.view.suffix。  </li>
+<li>控制器的url访问路径与注解@RestMapping（”/xxxx”）不匹配。<br>例：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@RequestMapping(value&#x3D;&quot;&#x2F;hello&quot;, method &#x3D; RequestMethod.GET)</span><br><span class="line">url &#x3D; http:&#x2F;&#x2F;localhost:8080&#x2F;hello</span><br></pre></td></tr></table></figure></li>
+<li>代码内注解是否正确完整@Service，@RestController等是否添加。  </li>
+</ol>
+</li>
+<li>访问测试项目路径localhost:8080 后台抛出异常:nested exception is org.apache.ibatis.exceptions.TooManyResultsException: Expected one result (or null) to be returned by selectOne(), but found: 2  <ul>
+<li>原因及解决方法  </li>
+</ul>
+<ol>
+<li>返回结果有多个：将接收数据的方法返回数据类型改为list&lt;&gt;即可。  </li>
+</ol>
+</li>
+<li>数据源配置出错<ul>
+<li>原因及解决方法</li>
+</ul>
+<ol>
+<li>错误配置<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">spring.datasource.url&#x3D;jdbc:mysql:&#x2F;&#x2F;localhost:3306&#x2F;数据库名称?useUnicode&#x3D;true&amp;characterEncoding&#x3D;utf8&amp;serverTimezone&#x3D;UTC</span><br><span class="line">spring.datasource.username&#x3D;用户名</span><br><span class="line">spring.datasource.password&#x3D;密码</span><br><span class="line">spring.datasource.driver-class-name&#x3D;com.mysql.jdbc.Driver</span><br></pre></td></tr></table></figure></li>
+<li>正确配置<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">spring.datasource.url&#x3D;jdbc:mysql:&#x2F;&#x2F;localhost:3306&#x2F;数据库名称?useUnicode&#x3D;true&amp;characterEncoding&#x3D;utf8&amp;serverTimezone&#x3D;UTC</span><br><span class="line">spring.datasource.username&#x3D;用户名</span><br><span class="line">spring.datasource.password&#x3D;密码</span><br><span class="line">spring.datasource.driver-class-name&#x3D;com.mysql.cj.jdbc.Driver</span><br></pre></td></tr></table></figure></li>
+<li>mysql版本不同驱动配置不同<br>com.mysql.jdbc.Driver是mysql5以前的，而mysql6以后就开始使用com.mysql.cj.jdbc.Driver（需要指定时区）。</li>
+</ol>
+</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/jianguo.github.io/2020/10/23/study1/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-other" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
