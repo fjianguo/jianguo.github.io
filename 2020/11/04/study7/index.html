@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://fjianguo.github.io/jianguo.github.io">
-  <title>Archives: 2020 | Hexo</title>
+  <title>进度 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://fjianguo.github.io/jianguo.github.io/archives/2020/index.html">
+  <meta name="description" content="任务 Android端将获取数据中标题相同的数据以曲线图的形式展示。 解决   思路：根据点的数量将Canvas等分，等分后先绘制图表的所有横轴和纵轴。再将数据转化为点坐标，绘制到屏幕上，最后将相邻两点连成线即可。自定义曲线图类12345678910111213141516171819202122232425262728293031323334353637383940414243444546474">
+<meta property="og:type" content="article">
+<meta property="og:title" content="进度">
+<meta property="og:url" content="https://fjianguo.github.io/jianguo.github.io/2020/11/04/study7/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="任务 Android端将获取数据中标题相同的数据以曲线图的形式展示。 解决   思路：根据点的数量将Canvas等分，等分后先绘制图表的所有横轴和纵轴。再将数据转化为点坐标，绘制到屏幕上，最后将相邻两点连成线即可。自定义曲线图类12345678910111213141516171819202122232425262728293031323334353637383940414243444546474">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-11-04T11:02:22.000Z">
+<meta property="article:modified_time" content="2020-11-04T11:07:48.043Z">
 <meta property="article:author" content="jianguo">
 <meta name="twitter:card" content="summary">
   
@@ -150,295 +154,164 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-study7" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      进度
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/jianguo.github.io/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/jianguo.github.io/2020/11/04/study7/" class="archive-article-date">
+
+        
+        <a href="/jianguo.github.io/2020/11/04/study7/" class="archive-article-date">
   	<time datetime="2020-11-04T11:02:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-04</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/jianguo.github.io/2020/11/04/study7/">进度</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="任务"><a href="#任务" class="headerlink" title="任务"></a>任务</h2><ol>
+<li>Android端将获取数据中标题相同的数据以曲线图的形式展示。<ul>
+<li>解决</li>
+</ul>
+<ol>
+<li>思路：根据点的数量将Canvas等分，等分后先绘制图表的所有横轴和纵轴。再将数据转化为点坐标，绘制到屏幕上，最后将相邻两点连成线即可。<br>自定义曲线图类<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br></pre></td><td class="code"><pre><span class="line">public class LineGraphicView extends View &#123;</span><br><span class="line">    &#x2F;**</span><br><span class="line">    * 公共部分</span><br><span class="line">    *&#x2F;</span><br><span class="line">    private static final int CIRCLE_SIZE &#x3D; 10;</span><br><span class="line"></span><br><span class="line">    private static enum Linestyle &#123;</span><br><span class="line">        Line, Curve</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private Context mContext;</span><br><span class="line">    private Paint mPaint;</span><br><span class="line">    private Resources res;</span><br><span class="line">    private DisplayMetrics dm;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">    * data</span><br><span class="line">    *&#x2F;</span><br><span class="line">    private Linestyle mStyle &#x3D; Linestyle.Curve;</span><br><span class="line"></span><br><span class="line">    private int canvasHeight;</span><br><span class="line">    private int canvasWidth;</span><br><span class="line">    private int bheight &#x3D; 0;</span><br><span class="line">    private int blwidh;</span><br><span class="line">    private boolean isMeasure &#x3D; true;</span><br><span class="line">    &#x2F;**</span><br><span class="line">    * Y轴最大值</span><br><span class="line">    *&#x2F;</span><br><span class="line">    private int maxValue;</span><br><span class="line">    &#x2F;**</span><br><span class="line">    * Y轴间距值</span><br><span class="line">    *&#x2F;</span><br><span class="line">    private int averageValue;</span><br><span class="line">    private int marginTop &#x3D; 20;</span><br><span class="line">    private int marginBottom &#x3D; 40;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">    * 曲线上总点数</span><br><span class="line">    *&#x2F;</span><br><span class="line">    private Point[] mPoints;</span><br><span class="line">    &#x2F;**</span><br><span class="line">    * 纵坐标值</span><br><span class="line">    *&#x2F;</span><br><span class="line">    private ArrayList&lt;Double&gt; yRawData;</span><br><span class="line">    &#x2F;**</span><br><span class="line">    * 横坐标值</span><br><span class="line">    *&#x2F;</span><br><span class="line">    private ArrayList&lt;String&gt; xRawDatas;</span><br><span class="line">    private ArrayList&lt;Integer&gt; xList &#x3D; new ArrayList&lt;Integer&gt;();&#x2F;&#x2F; 记录每个x的值</span><br><span class="line">    private int spacingHeight;</span><br><span class="line"></span><br><span class="line">    public LineGraphicView(Context context) &#123;</span><br><span class="line">        this(context, null);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public LineGraphicView(Context context, AttributeSet attrs) &#123;</span><br><span class="line">        super(context, attrs);</span><br><span class="line">        this.mContext &#x3D; context;</span><br><span class="line">        initView();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private void initView() &#123;</span><br><span class="line">        this.res &#x3D; mContext.getResources();</span><br><span class="line">        this.mPaint &#x3D; new Paint(Paint.ANTI_ALIAS_FLAG);</span><br><span class="line">        dm &#x3D; new DisplayMetrics();</span><br><span class="line">        WindowManager wm &#x3D; (WindowManager) mContext.getSystemService(Context.WINDOW_SERVICE);</span><br><span class="line">        wm.getDefaultDisplay().getMetrics(dm);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    protected void onSizeChanged(int w, int h, int oldw, int oldh) &#123;</span><br><span class="line">        if (isMeasure) &#123;</span><br><span class="line">            this.canvasHeight &#x3D; getHeight();</span><br><span class="line">            this.canvasWidth &#x3D; getWidth();</span><br><span class="line">            if (bheight &#x3D;&#x3D; 0)</span><br><span class="line">                bheight &#x3D; (int) (canvasHeight - marginBottom);</span><br><span class="line">            blwidh &#x3D; dip2px(30);</span><br><span class="line">            isMeasure &#x3D; false;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    protected void onDraw(Canvas canvas) &#123;</span><br><span class="line">        mPaint.setColor(res.getColor(R.color.color));</span><br><span class="line"></span><br><span class="line">        drawAllXLine(canvas);</span><br><span class="line">        &#x2F;&#x2F; 画直线（纵向）</span><br><span class="line">        drawAllYLine(canvas);</span><br><span class="line">        &#x2F;&#x2F; 点的操作设置</span><br><span class="line">        mPoints &#x3D; getPoints();</span><br><span class="line"></span><br><span class="line">        mPaint.setColor(res.getColor(R.color.color));</span><br><span class="line">        mPaint.setStrokeWidth(dip2px(2.5f));</span><br><span class="line">        mPaint.setStyle(Style.STROKE);</span><br><span class="line">        if (mStyle &#x3D;&#x3D; Linestyle.Curve) &#123;</span><br><span class="line">            drawScrollLine(canvas);</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            drawLine(canvas);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        mPaint.setStyle(Style.FILL);</span><br><span class="line">        for (int i &#x3D; 0; i &lt; mPoints.length; i++) &#123;</span><br><span class="line">            canvas.drawCircle(mPoints[i].x, mPoints[i].y, CIRCLE_SIZE &#x2F; 2, mPaint);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">    * 画所有横向表格，包括X轴</span><br><span class="line">    *&#x2F;</span><br><span class="line">    private void drawAllXLine(Canvas canvas) &#123;</span><br><span class="line">        for (int i &#x3D; 0; i &lt; spacingHeight + 1; i++) &#123;</span><br><span class="line">            if (spacingHeight !&#x3D; 0) &#123;</span><br><span class="line">                canvas.drawLine(blwidh, bheight - (bheight &#x2F; spacingHeight) * i + marginTop, (canvasWidth - blwidh),</span><br><span class="line">                        bheight - (bheight &#x2F; spacingHeight) * i + marginTop, mPaint);&#x2F;&#x2F; Y坐标</span><br><span class="line">                drawText(String.valueOf(averageValue * i), blwidh &#x2F; 2, bheight - (bheight &#x2F; spacingHeight) * i + marginTop,</span><br><span class="line">                        canvas);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">    * 画所有纵向表格，包括Y轴</span><br><span class="line">    *&#x2F;</span><br><span class="line">    private void drawAllYLine(Canvas canvas) &#123;</span><br><span class="line">        if (yRawData !&#x3D; null) &#123;</span><br><span class="line">            for (int i &#x3D; 0; i &lt; yRawData.size(); i++) &#123;</span><br><span class="line">                xList.add(blwidh + (canvasWidth - blwidh) &#x2F; yRawData.size() * i);</span><br><span class="line">                canvas.drawLine(blwidh + (canvasWidth - blwidh) &#x2F; yRawData.size() * i, marginTop, blwidh</span><br><span class="line">                        + (canvasWidth - blwidh) &#x2F; yRawData.size() * i, bheight + marginTop, mPaint);</span><br><span class="line">                drawText(xRawDatas.get(i), blwidh + (canvasWidth - blwidh) &#x2F; yRawData.size() * i, bheight + dip2px(26),</span><br><span class="line">                        canvas);&#x2F;&#x2F; X坐标</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private void drawScrollLine(Canvas canvas) &#123;</span><br><span class="line">        Point startp &#x3D; new Point();</span><br><span class="line">        Point endp &#x3D; new Point();</span><br><span class="line">        for (int i &#x3D; 0; i &lt; mPoints.length - 1; i++) &#123;</span><br><span class="line">            startp &#x3D; mPoints[i];</span><br><span class="line">            endp &#x3D; mPoints[i + 1];</span><br><span class="line">            int wt &#x3D; (startp.x + endp.x) &#x2F; 2;</span><br><span class="line">            Point p3 &#x3D; new Point();</span><br><span class="line">            Point p4 &#x3D; new Point();</span><br><span class="line">            p3.y &#x3D; startp.y;</span><br><span class="line">            p3.x &#x3D; wt;</span><br><span class="line">            p4.y &#x3D; endp.y;</span><br><span class="line">            p4.x &#x3D; wt;</span><br><span class="line"></span><br><span class="line">            Path path &#x3D; new Path();</span><br><span class="line">            path.moveTo(startp.x, startp.y);</span><br><span class="line">            path.cubicTo(p3.x, p3.y, p4.x, p4.y, endp.x, endp.y);</span><br><span class="line">            canvas.drawPath(path, mPaint);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private void drawLine(Canvas canvas) &#123;</span><br><span class="line">        Point startp &#x3D; new Point();</span><br><span class="line">        Point endp &#x3D; new Point();</span><br><span class="line">        for (int i &#x3D; 0; i &lt; mPoints.length - 1; i++) &#123;</span><br><span class="line">            startp &#x3D; mPoints[i];</span><br><span class="line">            endp &#x3D; mPoints[i + 1];</span><br><span class="line">            canvas.drawLine(startp.x, startp.y, endp.x, endp.y, mPaint);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private void drawText(String text, int x, int y, Canvas canvas) &#123;</span><br><span class="line">        Paint p &#x3D; new Paint(Paint.ANTI_ALIAS_FLAG);</span><br><span class="line">        p.setTextSize(dip2px(12));</span><br><span class="line">        p.setColor(res.getColor(R.color.colors));</span><br><span class="line">        p.setTextAlign(Paint.Align.LEFT);</span><br><span class="line">        canvas.drawText(text, x, y, p);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private Point[] getPoints() &#123;</span><br><span class="line">        if (yRawData !&#x3D; null) &#123;</span><br><span class="line">            Point[] points &#x3D; new Point[yRawData.size()];</span><br><span class="line">            for (int i &#x3D; 0; i &lt; yRawData.size(); i++) &#123;</span><br><span class="line">                int ph &#x3D; bheight - (int) (bheight * (yRawData.get(i) &#x2F; maxValue));</span><br><span class="line"></span><br><span class="line">                points[i] &#x3D; new Point(xList.get(i), ph + marginTop);</span><br><span class="line">            &#125;</span><br><span class="line">            return points;</span><br><span class="line">        &#125;</span><br><span class="line">        return new Point[0];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setData(ArrayList&lt;Double&gt; yRawData, ArrayList&lt;String&gt; xRawData, int maxValue, int averageValue,int spacingHeight) &#123;</span><br><span class="line">        this.maxValue &#x3D; maxValue;</span><br><span class="line">        this.averageValue &#x3D; averageValue;</span><br><span class="line">        this.mPoints &#x3D; new Point[yRawData.size()];</span><br><span class="line">        this.xRawDatas &#x3D; xRawData;</span><br><span class="line">        this.yRawData &#x3D; yRawData;</span><br><span class="line">        this.spacingHeight &#x3D; spacingHeight;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setTotalvalue(int maxValue) &#123;</span><br><span class="line">        this.maxValue &#x3D; maxValue;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setPjvalue(int averageValue) &#123;</span><br><span class="line">        this.averageValue &#x3D; averageValue;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setMargint(int marginTop) &#123;</span><br><span class="line">        this.marginTop &#x3D; marginTop;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setMarginb(int marginBottom) &#123;</span><br><span class="line">        this.marginBottom &#x3D; marginBottom;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setMstyle(Linestyle mStyle) &#123;</span><br><span class="line">        this.mStyle &#x3D; mStyle;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setBheight(int bheight) &#123;</span><br><span class="line">        this.bheight &#x3D; bheight;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">    * 根据手机的分辨率从 dp 的单位 转成为 px(像素)</span><br><span class="line">    *&#x2F;</span><br><span class="line">    private int dip2px(float dpValue) &#123;</span><br><span class="line">        return (int) (dpValue * dm.density + 0.5f);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">private void sendRequestWithOkHttp() &#123;</span><br><span class="line">    new Thread(new Runnable() &#123;</span><br><span class="line">        @Override</span><br><span class="line">        public void run() &#123;</span><br><span class="line">            try &#123;</span><br><span class="line">                Intent intent &#x3D; getIntent();</span><br><span class="line">                String title &#x3D; intent.getStringExtra(&quot;title&quot;); &#x2F;&#x2F;接收标题</span><br><span class="line">                OkHttpClient client &#x3D; new OkHttpClient();</span><br><span class="line">                RequestBody requestBody &#x3D; new FormBody.Builder()</span><br><span class="line">                        .add(&quot;title&quot;,title)</span><br><span class="line">                        .build();</span><br><span class="line">                Request request &#x3D; new Request.Builder()</span><br><span class="line">                        .url(&quot;http:&#x2F;&#x2F;10.0.2.2:8080&#x2F;api&#x2F;weibo&quot;)</span><br><span class="line">                        .post(requestBody)</span><br><span class="line">                        .build();</span><br><span class="line">                Response response &#x3D; client.newCall(request).execute();</span><br><span class="line">                String responseData &#x3D; response.body().string();</span><br><span class="line">                showRepose(responseData);</span><br><span class="line">            &#125; catch (Exception e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;).start();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">private void showRepose(final String response) &#123;</span><br><span class="line">    runOnUiThread(new Runnable() &#123;</span><br><span class="line">        @Override</span><br><span class="line">        public void run() &#123;</span><br><span class="line">            try &#123;</span><br><span class="line">                tu &#x3D; (LineGraphicView) findViewById(R.id.line_graphic);</span><br><span class="line">                JSONArray jsonArray &#x3D; new JSONArray(response);</span><br><span class="line">                String title &#x3D; null;</span><br><span class="line">                for (int i &#x3D; 0;i &lt; jsonArray.length(); i++)&#123;</span><br><span class="line">                    JSONObject jsonObject &#x3D; jsonArray.getJSONObject(i);</span><br><span class="line">                    title &#x3D; jsonObject.getString(&quot;title&quot;);</span><br><span class="line">                    String view &#x3D; jsonObject.getString(&quot;view&quot;);</span><br><span class="line">                    String time &#x3D; jsonObject.getString(&quot;time&quot;);</span><br><span class="line">                    yList.add(Double.parseDouble(view));</span><br><span class="line">                    xRawDatas.add(time);</span><br><span class="line">                    if (oldMax &gt;&#x3D; newMax) &#123;</span><br><span class="line">                        newMax &#x3D; oldMax;</span><br><span class="line">                        oldMax &#x3D; Integer.parseInt(view);</span><br><span class="line">                        averageValue &#x3D; newMax&#x2F;5;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                textView &#x3D; (TextView) findViewById(R.id.title);</span><br><span class="line">                textView.setText(title);</span><br><span class="line">                tu.setData(yList,xRawDatas,newMax * 2,averageValue,5);</span><br><span class="line">            &#125;catch (Exception e)&#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+</ol>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://fjianguo.github.io/jianguo.github.io/2020/11/04/study7/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/jianguo.github.io/2020/11/03/study6/" class="archive-article-date">
-  	<time datetime="2020-11-03T12:46:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-03</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/jianguo.github.io/2020/11/03/study6/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">进度</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/jianguo.github.io/2020/11/03/study6/">进度</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/jianguo.github.io/2020/10/29/study5/" class="archive-article-date">
-  	<time datetime="2020-10-29T12:39:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/jianguo.github.io/2020/10/29/study5/">进度</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/jianguo.github.io/2020/10/28/study4/" class="archive-article-date">
-  	<time datetime="2020-10-28T12:16:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/jianguo.github.io/2020/10/28/study4/">进度</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/jianguo.github.io/2020/10/27/study3/" class="archive-article-date">
-  	<time datetime="2020-10-27T11:25:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/jianguo.github.io/2020/10/27/study3/">进度</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/jianguo.github.io/2020/10/26/study2/" class="archive-article-date">
-  	<time datetime="2020-10-26T09:36:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/jianguo.github.io/2020/10/26/study2/">进度</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/jianguo.github.io/2020/10/23/study1/" class="archive-article-date">
-  	<time datetime="2020-10-23T11:12:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/jianguo.github.io/2020/10/23/study1/">进度</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/jianguo.github.io/2020/10/20/other/" class="archive-article-date">
-  	<time datetime="2020-10-20T07:11:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/jianguo.github.io/2020/10/20/other/">Other</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/jianguo.github.io/2020/10/20/java/" class="archive-article-date">
-  	<time datetime="2020-10-20T07:10:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/jianguo.github.io/2020/10/20/java/">Java</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/jianguo.github.io/2020/10/20/mysql/" class="archive-article-date">
-  	<time datetime="2020-10-20T07:10:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/jianguo.github.io/2020/10/20/mysql/">Mysql</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/jianguo.github.io/archives/2020/page/2/">2</a><a class="extend next" rel="next" href="/jianguo.github.io/archives/2020/page/2/">Next &amp;raquo;</a>
-    </nav>
   
 
 
@@ -462,8 +335,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
