@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://fjianguo.github.io/jianguo.github.io">
-  <title>Android之表格 | Hexo</title>
+  <title>Java 爬取微博热搜榜数据，存入数据库 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="任务 Android运用表格展示数据。 过程     在gradle中添加：implementation ‘com.hlq:tableview:1.1.0’ 项目根目录下的build.gradle中添加1234567allprojects &amp;#123;    repositories &amp;#123;        google()        jcenter()        maven &amp;#12">
+  <meta name="description" content="Java 爬取微博热搜榜数据，存入数据库 获取访问微博热搜榜的地址 https:&#x2F;&#x2F;s.weibo.com&#x2F;top&#x2F;summary&#x2F;summary?cate&#x3D;realtimehot   使用 Document 解析页面1Document document &#x3D; Jsoup.connect(url).get(); 使用 Elements 获取指定元素内容，并存入数组12Elements el">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android之表格">
-<meta property="og:url" content="https://fjianguo.github.io/jianguo.github.io/2020/10/29/study5/index.html">
+<meta property="og:title" content="Java 爬取微博热搜榜数据，存入数据库">
+<meta property="og:url" content="https://fjianguo.github.io/jianguo.github.io/2020/11/23/study19/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="任务 Android运用表格展示数据。 过程     在gradle中添加：implementation ‘com.hlq:tableview:1.1.0’ 项目根目录下的build.gradle中添加1234567allprojects &amp;#123;    repositories &amp;#123;        google()        jcenter()        maven &amp;#12">
+<meta property="og:description" content="Java 爬取微博热搜榜数据，存入数据库 获取访问微博热搜榜的地址 https:&#x2F;&#x2F;s.weibo.com&#x2F;top&#x2F;summary&#x2F;summary?cate&#x3D;realtimehot   使用 Document 解析页面1Document document &#x3D; Jsoup.connect(url).get(); 使用 Elements 获取指定元素内容，并存入数组12Elements el">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-10-29T12:39:40.000Z">
-<meta property="article:modified_time" content="2020-11-16T13:02:30.784Z">
+<meta property="article:published_time" content="2020-11-23T11:05:50.000Z">
+<meta property="article:modified_time" content="2020-11-23T11:40:58.196Z">
 <meta property="article:author" content="jianguo">
 <meta name="twitter:card" content="summary">
   
@@ -154,37 +154,34 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-study5" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-study19" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Android之表格
+      Java 爬取微博热搜榜数据，存入数据库
     </h1>
   
 
         
-        <a href="/jianguo.github.io/2020/10/29/study5/" class="archive-article-date">
-  	<time datetime="2020-10-29T12:39:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-29</time>
+        <a href="/jianguo.github.io/2020/11/23/study19/" class="archive-article-date">
+  	<time datetime="2020-11-23T11:05:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-23</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="任务"><a href="#任务" class="headerlink" title="任务"></a>任务</h2><ol>
-<li>Android运用表格展示数据。<ul>
-<li>过程  </li>
+        <h2 id="Java-爬取微博热搜榜数据，存入数据库"><a href="#Java-爬取微博热搜榜数据，存入数据库" class="headerlink" title="Java 爬取微博热搜榜数据，存入数据库"></a>Java 爬取微博热搜榜数据，存入数据库</h2><ol>
+<li>获取访问微博热搜榜的地址<ul>
+<li><a target="_blank" rel="noopener" href="https://s.weibo.com/top/summary/summary?cate=realtimehot">https://s.weibo.com/top/summary/summary?cate=realtimehot</a></li>
 </ul>
-<ol>
-<li>在gradle中添加：implementation ‘com.hlq:tableview:1.1.0’</li>
-<li>项目根目录下的build.gradle中添加<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">allprojects &#123;</span><br><span class="line">    repositories &#123;</span><br><span class="line">        google()</span><br><span class="line">        jcenter()</span><br><span class="line">        maven &#123;url &quot;https:&#x2F;&#x2F;dl.bintray.com&#x2F;huanglinqing&#x2F;maven&#x2F;&quot;&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>布局<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;hlq.tablbeview.TableView</span><br><span class="line">    android:id&#x3D;&quot;@+id&#x2F;tabview&quot;</span><br><span class="line">    android:layout_width&#x3D;&quot;wrap_content&quot;</span><br><span class="line">    android:layout_height&#x3D;&quot;wrap_content&quot;</span><br><span class="line">    app:colnum&#x3D;&quot;4&quot;</span><br><span class="line">    app:rownum&#x3D;&quot;1&quot; &#x2F;&gt;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">Intent intent &#x3D; getIntent();</span><br><span class="line">String jsonData &#x3D; intent.getStringExtra(&quot;list&quot;); &#x2F;&#x2F;接收上一个页面传递数据</span><br><span class="line">JSONArray jsonArray &#x3D; new JSONArray(jsonData);</span><br><span class="line">String[][] data &#x3D; new String[jsonArray.length()][4];</span><br><span class="line">for (int i &#x3D; 0; i &lt; jsonArray.length(); i++) &#123;</span><br><span class="line">    JSONObject jsonObject &#x3D; jsonArray.getJSONObject(i);</span><br><span class="line">    String id &#x3D; jsonObject.getString(&quot;id&quot;);</span><br><span class="line">    String rank &#x3D; jsonObject.getString(&quot;rank&quot;);</span><br><span class="line">    String title &#x3D; jsonObject.getString(&quot;title&quot;);</span><br><span class="line">    String view &#x3D; jsonObject.getString(&quot;view&quot;);</span><br><span class="line">    data[num][0] &#x3D; id;</span><br><span class="line">    data[num][1] &#x3D; rank;</span><br><span class="line">    data[num][2] &#x3D; title;</span><br><span class="line">    data[num][3] &#x3D; view;</span><br><span class="line">    tableView.setTableContent(data[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ol>
 </li>
+<li>使用 Document 解析页面<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Document document &#x3D; Jsoup.connect(url).get();</span><br></pre></td></tr></table></figure></li>
+<li>使用 Elements 获取指定元素内容，并存入数组<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Elements elements &#x3D; document.select(&quot;span&quot;);&#x2F;&#x2F;span为需求元素对应标签</span><br><span class="line">String[] str &#x3D; elements.eachText().toArray(new String[0]);</span><br></pre></td></tr></table></figure></li>
+<li>具体实现<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">public class Test &#123;</span><br><span class="line">    </span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line"></span><br><span class="line">        String myUrl &#x3D; &quot;jdbc:mysql:&#x2F;&#x2F;localhost:3306&#x2F;weibo?usaSSl&#x3D;false&amp;serverTimezone&#x3D;UTC&quot;;</span><br><span class="line">        String name &#x3D; &quot;root&quot;;</span><br><span class="line">        String pwd &#x3D; &quot;156176pwd&quot;;</span><br><span class="line">        String sql &#x3D; &quot;INSERT INTO search(s_rank,s_title,s_view) VALUES(?,?,?)&quot;;</span><br><span class="line">        String url &#x3D; &quot;https:&#x2F;&#x2F;s.weibo.com&#x2F;top&#x2F;summary&#x2F;summary?cate&#x3D;realtimehot&quot;;</span><br><span class="line"></span><br><span class="line">        try &#123;</span><br><span class="line">            Class.forName(&quot;com.mysql.cj.jdbc.Driver&quot;);</span><br><span class="line">            Connection connection &#x3D; DriverManager.getConnection(myUrl, name, pwd);</span><br><span class="line"></span><br><span class="line">            Document document &#x3D; Jsoup.connect(url).get();</span><br><span class="line"></span><br><span class="line">            Elements r &#x3D; document.select(&quot;td[class&#x3D;&#39;td-01 ranktop&#39;]&quot;);</span><br><span class="line">            String[] rank &#x3D; r.eachText().toArray(new String[0]);</span><br><span class="line"></span><br><span class="line">            Elements t &#x3D; document.select(&quot;td[class&#x3D;&#39;td-02&#39;] a&quot;);</span><br><span class="line">            String[] title &#x3D; t.eachText().toArray(new String[0]);</span><br><span class="line"></span><br><span class="line">            Elements v &#x3D; document.select(&quot;span&quot;);</span><br><span class="line">            String[] view &#x3D; v.eachText().toArray(new String[0]);</span><br><span class="line"></span><br><span class="line">            PreparedStatement statement &#x3D; connection.prepareStatement(sql);</span><br><span class="line"></span><br><span class="line">            for (int i &#x3D; 0; i &lt; rank.length; i++) &#123;</span><br><span class="line">                statement.setString(1, rank[i]);</span><br><span class="line">                statement.setString(2, title[i + 1]);</span><br><span class="line">                statement.setString(3, view[i]);</span><br><span class="line">                statement.setString(4, time);</span><br><span class="line">                statement.executeUpdate();</span><br><span class="line">            &#125;</span><br><span class="line">            connection.close();</span><br><span class="line">        &#125; catch (IOException | ClassNotFoundException | SQLException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ol>
 
       
@@ -265,7 +262,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://fjianguo.github.io/jianguo.github.io/2020/10/29/study5/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://fjianguo.github.io/jianguo.github.io/2020/11/23/study19/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -279,18 +276,9 @@
   
 <nav id="article-nav">
   
-    <a href="/jianguo.github.io/2020/11/03/study6/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Android之简单分页
-        
-      </div>
-    </a>
   
-  
-    <a href="/jianguo.github.io/2020/10/28/study4/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Android与后端的交互</div>
+    <a href="/jianguo.github.io/2020/11/23/study18/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Go Web基础</div>
       <i class="icon-circle-right"></i>
     </a>
   

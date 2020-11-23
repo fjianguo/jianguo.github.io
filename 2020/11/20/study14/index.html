@@ -6,19 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://fjianguo.github.io/jianguo.github.io">
-  <title>Android之表格 | Hexo</title>
+  <title>Java之Spring Boot | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="任务 Android运用表格展示数据。 过程     在gradle中添加：implementation ‘com.hlq:tableview:1.1.0’ 项目根目录下的build.gradle中添加1234567allprojects &amp;#123;    repositories &amp;#123;        google()        jcenter()        maven &amp;#12">
+  <meta name="description" content="Spring Boot的优点 简单易用，只需要懂java、c#、php、js都能快速入门 功能强大，几乎不用自己从头开发功能 部署方便  Spring Boot使用 创建一个maven项目，main包下新建resources包，resources包下新建application.properties文件(数据源等内容在其中配置) 配置pom.xml12345678910111213141516171">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android之表格">
-<meta property="og:url" content="https://fjianguo.github.io/jianguo.github.io/2020/10/29/study5/index.html">
+<meta property="og:title" content="Java之Spring Boot">
+<meta property="og:url" content="https://fjianguo.github.io/jianguo.github.io/2020/11/20/study14/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="任务 Android运用表格展示数据。 过程     在gradle中添加：implementation ‘com.hlq:tableview:1.1.0’ 项目根目录下的build.gradle中添加1234567allprojects &amp;#123;    repositories &amp;#123;        google()        jcenter()        maven &amp;#12">
+<meta property="og:description" content="Spring Boot的优点 简单易用，只需要懂java、c#、php、js都能快速入门 功能强大，几乎不用自己从头开发功能 部署方便  Spring Boot使用 创建一个maven项目，main包下新建resources包，resources包下新建application.properties文件(数据源等内容在其中配置) 配置pom.xml12345678910111213141516171">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-10-29T12:39:40.000Z">
-<meta property="article:modified_time" content="2020-11-16T13:02:30.784Z">
+<meta property="og:image" content="https://fjianguo.github.io/jianguo.github.io/2020/11/20/study14/images/%E5%88%86%E5%B1%82.JPG">
+<meta property="article:published_time" content="2020-11-20T10:12:08.000Z">
+<meta property="article:modified_time" content="2020-11-20T10:36:54.746Z">
 <meta property="article:author" content="jianguo">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://fjianguo.github.io/jianguo.github.io/2020/11/20/study14/images/%E5%88%86%E5%B1%82.JPG">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -154,36 +156,41 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-study5" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-study14" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Android之表格
+      Java之Spring Boot
     </h1>
   
 
         
-        <a href="/jianguo.github.io/2020/10/29/study5/" class="archive-article-date">
-  	<time datetime="2020-10-29T12:39:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-29</time>
+        <a href="/jianguo.github.io/2020/11/20/study14/" class="archive-article-date">
+  	<time datetime="2020-11-20T10:12:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-20</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="任务"><a href="#任务" class="headerlink" title="任务"></a>任务</h2><ol>
-<li>Android运用表格展示数据。<ul>
-<li>过程  </li>
-</ul>
-<ol>
-<li>在gradle中添加：implementation ‘com.hlq:tableview:1.1.0’</li>
-<li>项目根目录下的build.gradle中添加<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">allprojects &#123;</span><br><span class="line">    repositories &#123;</span><br><span class="line">        google()</span><br><span class="line">        jcenter()</span><br><span class="line">        maven &#123;url &quot;https:&#x2F;&#x2F;dl.bintray.com&#x2F;huanglinqing&#x2F;maven&#x2F;&quot;&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>布局<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;hlq.tablbeview.TableView</span><br><span class="line">    android:id&#x3D;&quot;@+id&#x2F;tabview&quot;</span><br><span class="line">    android:layout_width&#x3D;&quot;wrap_content&quot;</span><br><span class="line">    android:layout_height&#x3D;&quot;wrap_content&quot;</span><br><span class="line">    app:colnum&#x3D;&quot;4&quot;</span><br><span class="line">    app:rownum&#x3D;&quot;1&quot; &#x2F;&gt;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">Intent intent &#x3D; getIntent();</span><br><span class="line">String jsonData &#x3D; intent.getStringExtra(&quot;list&quot;); &#x2F;&#x2F;接收上一个页面传递数据</span><br><span class="line">JSONArray jsonArray &#x3D; new JSONArray(jsonData);</span><br><span class="line">String[][] data &#x3D; new String[jsonArray.length()][4];</span><br><span class="line">for (int i &#x3D; 0; i &lt; jsonArray.length(); i++) &#123;</span><br><span class="line">    JSONObject jsonObject &#x3D; jsonArray.getJSONObject(i);</span><br><span class="line">    String id &#x3D; jsonObject.getString(&quot;id&quot;);</span><br><span class="line">    String rank &#x3D; jsonObject.getString(&quot;rank&quot;);</span><br><span class="line">    String title &#x3D; jsonObject.getString(&quot;title&quot;);</span><br><span class="line">    String view &#x3D; jsonObject.getString(&quot;view&quot;);</span><br><span class="line">    data[num][0] &#x3D; id;</span><br><span class="line">    data[num][1] &#x3D; rank;</span><br><span class="line">    data[num][2] &#x3D; title;</span><br><span class="line">    data[num][3] &#x3D; view;</span><br><span class="line">    tableView.setTableContent(data[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+        <h2 id="Spring-Boot的优点"><a href="#Spring-Boot的优点" class="headerlink" title="Spring Boot的优点"></a>Spring Boot的优点</h2><ol>
+<li>简单易用，只需要懂java、c#、php、js都能快速入门</li>
+<li>功能强大，几乎不用自己从头开发功能</li>
+<li>部署方便</li>
 </ol>
+<h2 id="Spring-Boot使用"><a href="#Spring-Boot使用" class="headerlink" title="Spring Boot使用"></a>Spring Boot使用</h2><ol>
+<li>创建一个maven项目，main包下新建resources包，resources包下新建application.properties文件(数据源等内容在其中配置)</li>
+<li>配置pom.xml<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependencies&gt;</span><br><span class="line"></span><br><span class="line">        &lt;!-- Spring Boot Web 依赖 --&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.springframework.boot&lt;&#x2F;groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;spring-boot-starter-web&lt;&#x2F;artifactId&gt;</span><br><span class="line">        &lt;&#x2F;dependency&gt;</span><br><span class="line"></span><br><span class="line">        &lt;!-- Spring Boot Test 依赖 --&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.springframework.boot&lt;&#x2F;groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;spring-boot-starter-test&lt;&#x2F;artifactId&gt;</span><br><span class="line">            &lt;scope&gt;test&lt;&#x2F;scope&gt;</span><br><span class="line">        &lt;&#x2F;dependency&gt;</span><br><span class="line"></span><br><span class="line">        &lt;!-- Junit --&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;junit&lt;&#x2F;groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;junit&lt;&#x2F;artifactId&gt;</span><br><span class="line">            &lt;version&gt;4.12&lt;&#x2F;version&gt;</span><br><span class="line">        &lt;&#x2F;dependency&gt;</span><br><span class="line"></span><br><span class="line">        &lt;!-- Spring Boot Mybatis 依赖 --&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.mybatis.spring.boot&lt;&#x2F;groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;mybatis-spring-boot-starter&lt;&#x2F;artifactId&gt;</span><br><span class="line">            &lt;version&gt;2.1.3&lt;&#x2F;version&gt;</span><br><span class="line">        &lt;&#x2F;dependency&gt;</span><br><span class="line"></span><br><span class="line">    &lt;&#x2F;dependencies&gt;</span><br></pre></td></tr></table></figure>
+<!--mroe--></li>
+<li>代码编写<ul>
+<li>一般我们将代码分应用层（Controller）、服务层（Service）、数据层（Dao）</li>
+<li>项目分层<br><img src="images/%E5%88%86%E5%B1%82.JPG" alt="项目分层"></li>
+<li>Hello World编写<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">Application 代码</span><br><span class="line">@SpringBootApplication</span><br><span class="line">public class Application &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        SpringApplication.run(Application.class, args);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Controller代码（controller下新建java文件）</span><br><span class="line">@RestController</span><br><span class="line">@RequestMapping(&quot;&#x2F;hello&quot;)</span><br><span class="line">public class HelloWorldController &#123;</span><br><span class="line">    @RequestMapping(&quot;&#x2F;say&quot;)</span><br><span class="line">    public String say()&#123;</span><br><span class="line">        return &quot;Hello World&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 </li>
 </ol>
 
@@ -265,7 +272,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://fjianguo.github.io/jianguo.github.io/2020/10/29/study5/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://fjianguo.github.io/jianguo.github.io/2020/11/20/study14/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -279,18 +286,18 @@
   
 <nav id="article-nav">
   
-    <a href="/jianguo.github.io/2020/11/03/study6/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/jianguo.github.io/2020/11/20/study15/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Android之简单分页
+          Spring Boot + Mybatis + Mysql实例
         
       </div>
     </a>
   
   
-    <a href="/jianguo.github.io/2020/10/28/study4/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Android与后端的交互</div>
+    <a href="/jianguo.github.io/2020/11/20/study13/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Android使用Bottom Navigation Activity来实现底部导航栏</div>
       <i class="icon-circle-right"></i>
     </a>
   
