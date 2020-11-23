@@ -15,12 +15,12 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="Spring Boot的优点 简单易用，只需要懂java、c#、php、js都能快速入门 功能强大，几乎不用自己从头开发功能 部署方便  Spring Boot使用 创建一个maven项目，main包下新建resources包，resources包下新建application.properties文件(数据源等内容在其中配置) 配置pom.xml12345678910111213141516171">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://fjianguo.github.io/jianguo.github.io/2020/11/20/study14/images/%E5%88%86%E5%B1%82.JPG">
+<meta property="og:image" content="https://fjianguo.github.io/jianguo.github.io/2020/11/20/study14/images/3.JPG">
 <meta property="article:published_time" content="2020-11-20T10:12:08.000Z">
-<meta property="article:modified_time" content="2020-11-20T10:36:54.746Z">
+<meta property="article:modified_time" content="2020-11-23T12:13:41.769Z">
 <meta property="article:author" content="jianguo">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://fjianguo.github.io/jianguo.github.io/2020/11/20/study14/images/%E5%88%86%E5%B1%82.JPG">
+<meta name="twitter:image" content="https://fjianguo.github.io/jianguo.github.io/2020/11/20/study14/images/3.JPG">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -187,7 +187,7 @@
 <!--mroe--></li>
 <li>代码编写<ul>
 <li>一般我们将代码分应用层（Controller）、服务层（Service）、数据层（Dao）</li>
-<li>项目分层<br><img src="images/%E5%88%86%E5%B1%82.JPG" alt="项目分层"></li>
+<li>项目分层<br><img src="images/3.JPG" alt="项目分层"></li>
 <li>Hello World编写<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">Application 代码</span><br><span class="line">@SpringBootApplication</span><br><span class="line">public class Application &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        SpringApplication.run(Application.class, args);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Controller代码（controller下新建java文件）</span><br><span class="line">@RestController</span><br><span class="line">@RequestMapping(&quot;&#x2F;hello&quot;)</span><br><span class="line">public class HelloWorldController &#123;</span><br><span class="line">    @RequestMapping(&quot;&#x2F;say&quot;)</span><br><span class="line">    public String say()&#123;</span><br><span class="line">        return &quot;Hello World&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
